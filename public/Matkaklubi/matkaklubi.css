@@ -1,0 +1,134 @@
+.paiskonteiner {
+background-image: url(./Pildid/Hills.png);
+background-repeat: no-repeat;
+background-size: cover;
+height: 778px;
+padding: 15px;
+font-family: 'Montserrat', sans-serif;
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+} 
+.container {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}   
+.body {
+    font-family: 'Montserrat', sans-serif;
+}   
+.logo {
+    display: flex;
+} 
+.pilt {
+    display: flex;
+    size: 50px;
+    top: 37px;
+    left: 72px;
+    width: 67px;
+    height: 64px;
+} 
+.pealkiri {
+    font-size: 33px;
+    line-height: 35px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 126px;
+    text-transform: uppercase;
+} 
+.menyyriba {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+} 
+.menyy {
+    word-spacing: 20px;
+} 
+.menyy ul {
+    text-align: left;
+    padding-left: 120px;
+    font-family:'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+    word-spacing: 20px;
+    list-style-type: none;
+    display: flex;
+letter-spacing: 2.5px;
+color: #000000;
+opacity: 1;
+display: flex;
+font-weight: bold;
+}
+.menyy li {
+   text-align: center
+}
+.menyy li:hover {
+    background-color: rgb(218, 206, 240);
+}   
+@media screen and (min-width: 600px) {
+    .menyy ul {
+        flex-direction: row;}
+    .menyy li {
+    margin-right: 5px;}
+}
+@media screen and (min-width: 800px) {
+    .menyy ul {
+        flex-direction: row-reverse;}
+    .menyy li a {
+    padding: 20px;
+font-size: larger}
+}
+.tiitliriba {
+    font-family:'Montserrat', sans-serif;
+    padding-top: 220px;
+}
+.tiitliriba h1 {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+font-size: 55px;
+font-weight: bolder;
+}
+.tiitliriba h2 {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+font-size: 28px;
+}
+.tiitliriba h3 {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+font-size: 18px;
+}
+.matkakonteiner {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.matkakonteiner {
+    padding-top: 30px;
+}
+.card-img-top {
+    height: 160px;
+} 
+.tiitliriba button {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2.25px;
+    font-size: 12px;
+    line-height: 46px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 0px;
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+}
+
+
+
