@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Matkaklubi - registreerumine</title>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+        <div class="container">
+        <div class="menyyriba">
+            <div class="logo">
+                    <img class= "pilt" src="./Matkaklubi/Pildid/klubilogo.png" alt>
+                <div class="pealkiri">CURIOUS OTTER</div>
+            </div>
+            <div class="menyy">
+<ul>
+    <li>KONTAKT</li>
+    <li>MEIST</li>
+    <li>MATKAD</li>
+    <li>ESILEHT</li>
+</ul>
+            </div>
+
+        </div>
+
+    <div class="row"></div>
+    <h2>
+        Registreeru matkale!
+    </h2>
+    <form action="">
+        <div>
+            <label for="nimi">Sinu nimi:</label>
+            <input type="text" name="nimi" id="nimi" placeholder="Ees- ja perekonnanimi" required>
+        </div>
+        <div>
+            <label for="Epost">E-posti aadress:</label>
+            <input type="Epost" name="Epost" id="Epost" placeholder="E-post" required>
+        </div>
+        <div>
+            <label for="Markused">Matka nimi ja muu info:</label>
+            <input type="Markused" name="Markused" id="Markused" placeholder="Matka nimi ja märkused" required>
+        </div>
+        <input type="submit" name="Kinnita" id="kinnita" placeholder="Kinnita">
+    </form>
+</div>
+    </div>
+</body>
+</html>
