@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <title>Matkaklubi - registreerumine</title>
     <% include ../partials/header.ejs %>
 </head>
 
 <body>
         <div class="container">
-        <div class="menyyriba">
-            <div class="logo">
-                    <img class= "pilt" src="./Matkaklubi/Pildid/klubilogo.png" alt>
-                <div class="pealkiri">CURIOUS OTTER</div>
-            </div>
-            <div class="menyy">
-<ul>
-    <li>KONTAKT</li>
-    <li>MEIST</li>
-    <li>MATKAD</li>
-    <li>ESILEHT</li>
-</ul>
-            </div>
-
-        </div>
-
-    <div class="row"></div>
+            <% include ../partials/menyy.ejs %>
+<div class="container">
     <h2>
-        Registreeru matkale!
+        Registreeru matkale: <%= andmed.nimi %>!
     </h2>
+    <div class="row"></div>
+    <div class="col sm-6">
+        <%= andmed.kirjeldus %>
+    </div>
+    <div class="col sm-6">
+        <img class="img-fluid" src="<% andmed.piltUrl %>" alt="">
+    </div>
+</div>
     <form action="">
         <div>
             <label for="nimi">Sinu nimi:</label>
