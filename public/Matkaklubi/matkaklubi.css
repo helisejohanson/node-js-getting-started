@@ -114,7 +114,7 @@ font-size: 18px;
 }
 .card-img-top {
     height: 160px;
-} 
+}   
 .tiitliriba button {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -129,6 +129,10 @@ font-size: 18px;
     background-color: black;
     margin-top: 20px;
 }
-
-
-
+a:link {
+text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+    }
+    
