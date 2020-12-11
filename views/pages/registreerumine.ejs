@@ -3,6 +3,7 @@
 <head>
     <title>Matkaklubi - registreerumine</title>
     <% include ../partials/header.ejs %>
+    <script src="/matkaklubi/registreeru.js"></script>
 </head>
 
 <body>
@@ -33,9 +34,11 @@
             <label for="Markused">Matka nimi ja muu info:</label>
             <input type="Markused" name="Markused" id="Markused" placeholder="Matka nimi ja märkused" required>
         </div>
-        <input type="submit" name="Kinnita" id="kinnita" placeholder="Kinnita">
+        <input type="button" class="btn btn primary" value="Kinnita" id="kinnita" placeholder="Kinnita" onclick= "return registreeru()">
     </form>
 </div>
     </div>
+    <input type="hidden" id="matkIndex" name="matkIndex" value="<%= matk %>">
 </body>
+
 </html>

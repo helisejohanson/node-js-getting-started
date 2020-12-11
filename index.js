@@ -31,6 +31,21 @@ const matk4 = {
 }
 const matkad = [matk1, matk2, matk3, matk4];
 
+function registreeri(req, res) {
+  const nimi = req.query.nimi;
+  const matkIndex = req.query.matkIndex;
+  const email = req.query.email;
+  const markused = req.query.markused;
+  console.log(`Käivtati registreerumine. Registreerus ${nimi} matkale ${matkIndex} ja kelle email on ${email} ja lisatud ${markused}`);
+  const matkaAndmed = { index: matkIndex, nimi: nimi, email: email, markused: markused };
+  //TODO: Lisa matkaAndmed registreerumiste info juurde
+  // ...
+  res.send({ 
+    success: true,
+teade: `Käivtati registreerumine. Registreerus ${nimi} matkale ${matkIndex} ja kelle email on ${email} ja lisatud ${markused}`
+});
+}
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -39,4 +54,5 @@ express()
   .get('/registreeru', (req, res) => res.render('pages/registreerumine', {matk: req.query.matk, andmed: matkad[req.query.matk-1] }))
   .get('/kontakt', (req, res) => res.render('pages/kontakt'))
   .get('/Meist', (req, res) => res.render('pages/Meist'))
+  .get('/kinnita', registreeri)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
