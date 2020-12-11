@@ -138,3 +138,6 @@ a:active {
 .menyy a {
     color: #000000;
 }
+.regamine label {
+    display: block;
+}

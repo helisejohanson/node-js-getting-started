@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Matkaklubi - registreerumine</title>
     <% include ../partials/header.ejs %>
@@ -7,36 +8,40 @@
 </head>
 
 <body>
+    <div class="container">
+        <% include ../partials/menyy.ejs %>
         <div class="container">
-            <% include ../partials/menyy.ejs %>
-<div class="container">
-    <h2>
-        Registreeru matkale: <%= andmed.nimi %>!
-    </h2>
-    <div class="row"></div>
-    <div class="col sm-6">
-        <%= andmed.kirjeldus %>
+            <h2>
+                Registreeru matkale: <%= andmed.nimi %>!
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <%= andmed.kirjeldus %>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="<%= andmed.piltUrl %>" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <form action="" class="regamine">
+                <div>
+                    <label for="nimi">Sinu nimi:</label>
+                    <input type="text" name="nimi" id="nimi" placeholder="Ees- ja perekonnanimi" required>
+                </div>
+                <div>
+                    <label for="Epost">E-posti aadress:</label>
+                    <input type="Epost" name="Epost" id="Epost" placeholder="E-post" required>
+                </div>
+                <div>
+                    <label for="Markused">Matka nimi ja muu info:</label>
+                    <textarea name="Markused" id="Markused" placeholder="Matka nimi ja märkused"></textarea>
+                </div>
+                <input type="submit" class="btn btn primary" value="Kinnita" id="kinnita" placeholder="Kinnita"
+                    onclick="return registreeru()">
+            </form>
+        </div>
     </div>
-    <div class="col sm-6">
-        <img class="img-fluid" src="<%= andmed.piltUrl %>" alt="">
-    </div>
-</div>
-    <form action="">
-        <div>
-            <label for="nimi">Sinu nimi:</label>
-            <input type="text" name="nimi" id="nimi" placeholder="Ees- ja perekonnanimi" required>
-        </div>
-        <div>
-            <label for="Epost">E-posti aadress:</label>
-            <input type="Epost" name="Epost" id="Epost" placeholder="E-post" required>
-        </div>
-        <div>
-            <label for="Markused">Matka nimi ja muu info:</label>
-            <input type="Markused" name="Markused" id="Markused" placeholder="Matka nimi ja märkused" required>
-        </div>
-        <input type="button" class="btn btn primary" value="Kinnita" id="kinnita" placeholder="Kinnita" onclick= "return registreeru()">
-    </form>
-</div>
     </div>
     <input type="hidden" id="matkIndex" name="matkIndex" value="<%= matk %>">
 </body>
