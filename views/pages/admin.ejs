@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Matkaklubi - registreerumine</title>
+    <% include ../partials/header.ejs %>
+    <script src="/matkaklubi/registreeru.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <% include ../partials/menyy.ejs %>
+        <div class="container">
+            <h2>
+                Registreeru matkale: <%= andmed.nimi %>!
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <%= andmed.kirjeldus %>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="<%= andmed.piltUrl %>" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="registreerunud" class="row justify-content-center">
+            <% for  ( let i = 0; i < andmed.registreerunud.lenght; i++) { %>
+                <div>
+                   <p> 
+                       Nimi: <%= andmed.registreerunud[i].nimi %>
+                   </p>
+                   <p> 
+                    email: <%= andmed.registreerunud[i].email %>
+                </p>
+                </div>
+                <% } %>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
