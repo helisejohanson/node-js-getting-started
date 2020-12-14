@@ -9,9 +9,6 @@ margin-left: auto;
 margin-right: auto;
 flex-direction: column;
 } 
-.paiskonteiner {
-
-}
 .container {
     width: 100%;
     padding-right: 12px;
@@ -145,3 +142,6 @@ a:active {
 .regamine label {
     display: block;
 }
+.kontakt {
+    font-family: 'Montserrat', sans-serif;
+}  
